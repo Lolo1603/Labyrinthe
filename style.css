@@ -1,0 +1,60 @@
+/* Définition du style général de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #36393f; /* Fond sombre (style Discord/Dark mode) */
+    color: #fff; /* Texte blanc */
+}
+
+/* Style des titres */
+h1, h2, h3 {
+    color: #7289da; /* Bleu clair */
+}
+
+/* Style du bloc Statut (Score, Clés) */
+.statut {
+    border: 2px solid #5865f2; /* Bordure bleue */
+    padding: 15px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #2f3136;
+    border-radius: 8px;
+}
+
+/* Style général des boutons de direction */
+.direction {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 8px;
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50; /* Vert par défaut */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Effet au survol des boutons cliquables */
+.direction:hover {
+    background-color: #45a049;
+}
+
+/* Styles spécifiques pour les états des passages */
+.direction[style*="red"], /* Le chemin est bloqué (span) */
+.direction[style*="background-color: #ff4545"] { 
+    background-color: #ff4545 !important; /* Rouge */
+    cursor: not-allowed;
+}
+.direction[style*="orange"], /* Ouvrir la grille */
+.direction[style*="background-color: #faa61a"] { 
+    background-color: #faa61a !important; /* Orange */
+}
+
+/* Style du bouton Recommencer dans le bloc de fin de partie */
+.direction[style*="#5865f2"] {
+    background-color: #5865f2 !important; /* Bleu foncé */
+}
+
+
